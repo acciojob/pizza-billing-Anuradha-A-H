@@ -71,12 +71,12 @@ public class Pizza {
 
     public void addTakeaway(){
         // your code goes here
-        if(!map.contains("bag"))
-        {
+//        if(!map.contains("bag"))
+//        {
             map.add("bag");
             total += 20;
             bill += "Paperbag Added: 20\n";
-        }
+//        }
     }
 
     public String getBill(){
