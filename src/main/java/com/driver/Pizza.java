@@ -47,12 +47,12 @@ public class Pizza {
 
     public void addExtraToppings(){
         // your code goes here
-        if(!map.contains("Cheese"))
-        {
-            map.add("Cheese");
-            total += 80;
-            bill += "Extra Cheese Added: 80\n";
-        }
+//        if(!map.contains("Cheese"))
+//        {
+//            map.add("Cheese");
+//            total += 80;
+//            bill += "Extra Cheese Added: 80\n";
+//        }
         if(!map.contains("Toppings"))
         {
             if(isVeg)
@@ -81,7 +81,7 @@ public class Pizza {
 
     public String getBill(){
         // your code goes here
-        bill += "Total Price: "+total;
+        bill += "Total Price: "+total+"\n";
         return this.bill;
     }
 }
