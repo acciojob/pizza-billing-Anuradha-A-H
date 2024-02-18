@@ -38,10 +38,11 @@ public class Pizza {
         {
 
                 map.add("Cheese");
-                total += 80;
+
                 bill += "Extra Cheese Added: 80\n";
 
         }
+        total += 80;
 
     }
 
@@ -53,16 +54,20 @@ public class Pizza {
 //            total += 80;
 //            bill += "Extra Cheese Added: 80\n";
 //        }
+        if(isVeg)
+        {
+            total += 70;
+        }else{
+            total += 120;
+        }
         if(!map.contains("Toppings"))
         {
+            map.add("Toppings");
             if(isVeg)
             {
-                map.add("Toppings");
-                total += 70;
+
                 bill += "Extra Toppings Added: 70\n";
             }else{
-                map.add("Toppings");
-                total += 120;
                 bill += "Extra Toppings Added: 120\n";
             }
 
@@ -73,7 +78,7 @@ public class Pizza {
         // your code goes here
 //        if(!map.contains("bag"))
 //        {
-            map.add("bag");
+//            map.add("bag");
             total += 20;
             bill += "Paperbag Added: 20\n";
 //        }
