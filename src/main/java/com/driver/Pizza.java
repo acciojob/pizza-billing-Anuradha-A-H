@@ -81,7 +81,12 @@ public class Pizza {
 
     public String getBill(){
         // your code goes here
-        bill += "Total Price: "+total+"\n";
+        if(!map.contains("totalbill"))
+        {
+            map.add("totalbill");
+            bill += "Total Price: "+total+"\n";
+        }
+
         return this.bill;
     }
 }
