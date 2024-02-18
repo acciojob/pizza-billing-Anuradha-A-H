@@ -29,7 +29,7 @@ public class Pizza {
     }
 
     public int getPrice(){
-        return this.price;
+        return this.total;
     }
 
     public void addExtraCheese(){
@@ -38,50 +38,31 @@ public class Pizza {
         {
 
                 map.add("Cheese");
-
+                total += 80;
                 bill += "Extra Cheese Added: 80\n";
 
         }
-        total += 80;
 
     }
 
     public void addExtraToppings(){
         // your code goes here
-//        if(!map.contains("Cheese"))
-//        {
-//            map.add("Cheese");
-//            total += 80;
-//            bill += "Extra Cheese Added: 80\n";
-//        }
-        if(isVeg)
-        {
-            total += 70;
-        }else{
-            total += 120;
-        }
-        if(!map.contains("Toppings"))
-        {
+        if (!map.contains("Toppings")) {
+            int toppingsPrice = isVeg ? 70 : 120;
             map.add("Toppings");
-            if(isVeg)
-            {
-
-                bill += "Extra Toppings Added: 70\n";
-            }else{
-                bill += "Extra Toppings Added: 120\n";
-            }
-
+            total += toppingsPrice;
+            bill += "Extra Toppings Added: " + toppingsPrice + "\n";
         }
     }
 
     public void addTakeaway(){
         // your code goes here
-//        if(!map.contains("bag"))
-//        {
-//            map.add("bag");
+
+        if(!map.contains("bag")) {
             total += 20;
+            map.add("bag");
             bill += "Paperbag Added: 20\n";
-//        }
+        }
     }
 
     public String getBill(){
